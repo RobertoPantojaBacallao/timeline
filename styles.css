@@ -1,0 +1,130 @@
+:root {
+  --background-color: #f7f7f7;
+  --border-color: #171717;
+  --accent-color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+	--background-color: #171717;
+	--border-color: #f2f2f2;
+	--accent-color: #c9c9c9;
+	color: #f2f2f2;
+  }
+}
+
+main {
+  background-color: var(--background-color);
+  border: 0.15em solid var(--border-color);
+  padding: 3em;
+  border-radius: 2em;
+  width: clamp(10em, 50vw, 40em);
+  position: relative;
+  overflow: hidden;
+  padding-inline-start: 5em;
+  justify-items: center;
+  justify-self: center;
+}
+
+header {
+  justify-items: center;
+}
+
+header h1 {
+  font-weight: normal;
+}
+
+header p {
+  color: var(--accent-color);
+}
+
+.timeline {
+  width: fit-content;
+  position: relative;
+  margin: auto;
+  align-self: center;
+  margin-block: 3em;
+}
+
+.timeline::before {
+  content: "";
+  height: 100%;
+  width: 0.1em;
+  background-color: var(--border-color);
+  position: absolute;
+  top: 0;
+  left: -2.5em;
+  transform: translateX(-50%);
+}
+
+.timeline section p:first-of-type {
+  color: var(--accent-color);
+}
+
+.timeline section {
+  position: relative;
+  padding: 1em;
+  margin: 1em 0 1em 0;
+  border-radius: 1em;
+}
+
+.timeline section::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  background-color: var(--border-color);
+  position: absolute;
+  top: 44%;
+  left: -2.5em;
+  transform: translateX(-50%);
+}
+
+button {
+  border: 0.1em solid var(--background-color);
+  background-color: var(--border-color);
+  color: var(--background-color);
+  padding: 0 2em 0 2em;
+  border-radius: 1em;
+  transition: 400ms ease;
+}
+
+button:hover {
+  cursor: pointer;
+  border-color: var(--border-color);
+  background-color: var(--background-color);
+  color: var(--border-color);
+  transform: scale(1.01);
+}
+
+button:active {
+  transform: scale(1);
+  border-color: var(--accent-color);
+  background-color: var(--border-color);
+  color: var(--background-color);
+}
+
+@media (min-width: 1250px) {
+  .timeline::before {
+	left: 50%;
+  }
+
+  .timeline section::before {
+	left: 0%
+  }
+
+  .timeline section:nth-child(2n)::before {
+	left: 100%;
+  }
+
+  .timeline section {
+	right: -50%;
+	text-align: left;
+  }
+
+  .timeline section:nth-child(2n) {
+	text-align: right;
+	right: 50%;
+  }
+}
