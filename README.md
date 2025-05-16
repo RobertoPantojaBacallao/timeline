@@ -2,7 +2,7 @@
 
 Simple responsive changelog using just html and css.
 
-Built so I can experiment with responsive design features I didn't know too well like media queries, logical properties, and pseudo-elements.
+Built so I can experiment with responsive design features I wasn't very familiar with like media queries, logical properties, and pseudo-elements.
 
 Idea from [roadmap.sh](https://roadmap.sh/projects/changelog-component).
 
