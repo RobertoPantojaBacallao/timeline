@@ -13,3 +13,5 @@ Idea from [roadmap.sh](https://roadmap.sh/projects/changelog-component).
 ## Demo
 https://github.com/user-attachments/assets/c9cbde08-e3a6-44da-8be0-aeec493c8da5
 
+## How to Run
+Simple - just download the repository, open your favorite browser, paste the the path to timeline.html in the navigation bar, and press enter.
